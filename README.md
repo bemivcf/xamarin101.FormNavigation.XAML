@@ -1,11 +1,11 @@
 # xamarin101.FormNavigation.XAML
 
 # MainPage.xaml.cs
-
+```
  public class MainPageViewModel : INotifyPropertyChanged
-    {
-        //collection
-        public ObservableCollection<string> Notes { get; set; } // create a list at anytime it changes; let the list updated
+ {
+      
+        public ObservableCollection<string> Notes { get; set; } 
 
         public event PropertyChangedEventHandler PropertyChanged;
         string theNote;
@@ -57,8 +57,9 @@
 
       
     }
-
+```
 # MainPage.xaml
+```
 ...
 <CollectionView ItemsSource="{Binding Notes}"
                         SelectionMode="Single"
@@ -78,9 +79,9 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 ...
-
+```
 # DetailPageViewModel.cs
-
+```
  public class DetailPageViewModel: INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -93,7 +94,8 @@
         }
 
         string noteText;
-        public string NoteText {
+        public string NoteText 
+        {
             get => noteText;
             set
             {
@@ -105,8 +107,9 @@
         public Command DismissPageCommand { get; }
 
     }
-    
+ ```   
 # Detailpage.xaml
+```
 ...
 <ContentPage.Content>
         <Grid>
@@ -127,7 +130,9 @@
         
     </ContentPage.Content>
 ...
+```
 # MainPageViewModel.cs 
+```
 ...
  public class MainPageViewModel : INotifyPropertyChanged
     {
@@ -185,3 +190,4 @@
       
     }
 ...
+```
